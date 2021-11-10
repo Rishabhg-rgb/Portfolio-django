@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href={% static 'portfolio.css' %}>k
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="user">
+            <img src={% static 'rishabh.jpg' %} alt="">
+            <h3 class="name">Rishabh Goswami</h3>
+            <p>Web developer</p>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <a href="#home">
+                    <li>Home</li>
+                </a>
+                <a href="#about">
+                    <li>About</li>
+                </a>
+                <a href="#education">
+                    <li>Education</li>
+                </a>
+                <a href="#">
+                    <li>Portfolio</li>
+                </a>
+                <a href="#contact">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <!-- header section ends -->
+    <div id="menu" class="fa fa-bars">
+        <div class="burger"></div>
+        <div class="burger"></div>
+        <div class="burger"></div>
+    </div>
+    <section>
+        <!-- Section home -->
+        <section class="home" id="home">
+            <h3>HI THERE !</h3>
+            <h1>I'm <span>Rishabh Goswami</span></h1>
+            <p>I'm b.Tech 3rd year student. A web developer and providng content on web development.</p>
+            <a href="#about"><button>About me</button></a>
+        </section>
+        <!--  section home ends -->
+
+        <!-- section about starts -->
+
+        <section class="about" id="about">
+            <h1 class="heading"><span>About</span> Me</h1>
+            <div class="row">
+                <div class="info">
+                    <h3>Name: <span>Rishabh Goswami</span></h3>
+                    <h3>Age: <span>20</span></h3>
+                    <h3>Post: <span>Web developer</span></h3>
+                    <h3>Nationality: <span>Indian</span></h3>
+                    <a href="#">
+                        <button class="btn">Download CV</button>
+                    </a>
+                </div>
+
+                <div class="counter">
+                    <div class="box">
+                        <span>1+</span>
+                        <h3>Year of experience</h3>
+                    </div>
+                    <div class="box">
+                        <span>10+</span>
+                        <h3>Projects</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- sectio  about ends -->
+
+
+
+    </section>
+
+
+
+
+
+
+    <!-- Myeducation section -->
+    <section class="education" id="education">
+        <h1 class="heading">My <span>Education</span></h1>
+        <div class="box-container">
+
+            <div class="box">
+                <span>2017</span>
+                <h3>HighSchool Passout</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere commodi neque, quisquam numquam
+                    ducimus aliquid sunt inventore itaque iste?</p>
+            </div>
+
+            <div class="box">
+                <span>2019</span>
+                <h3>Intermediate Passout</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere commodi neque, quisquam numquam
+                    ducimus aliquid sunt inventore itaque iste?</p>
+            </div>
+
+            <div class="box">
+                <span>2017</span>
+                <h3>B.tech</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facere commodi neque, quisquam numquam
+                    ducimus aliquid sunt inventore itaque iste?</p>
+            </div>
+
+
+
+        </div>
+    </section>
+    <!-- Myeducation section ends -->
+
+
+
+
+    <!--  -->
+    <section class="contact" id="contact">
+        <div class="heading"><span>Contact</span> Us</div>
+
+        <div class="row">
+            <div class="content">
+                <h3 class="title"> CONTACT INFO</h3>
+
+                <div class="info">
+                    <h3><i class="material-icons" style="color: red; font-size: 2rem; margin-right: 0.5rem;">&#xe0be;</i>
+                        rishabhgoswami901@gmail.com</h3>
+                    <h3><i class="material-icons" style="color: red; font-size: 2rem; margin-right: 0.5rem;">&#xe0b0;</i>
+                        +91 9012925961</h3>
+                    <h3><i class="material-icons" style="color: red; font-size: 2rem; margin-right: 0.5rem;">&#xe1b3;</i>
+                        U.P, India - 282010</h3>
+                </div>
+            </div>
+            <form action="/submit/" method="post"> 
+                {% csrf_token %}
+                <input required type="text" name="name" id="" placeholder="Name">
+                <input required type="email" name="email" id="" placeholder="Email">
+                <input type="tel" name="phone" placeholder="Phone">
+                <input required type="text" name="project" id="" placeholder="Project">
+                <textarea required name="message" id="" cols="30" rows="5" placeholder="Message"></textarea>
+                <button type="submit" style="font-size:24px">Send <i class="fa fa-send"></i></button>
+            </form>
+        </div>
+
+    </section>
+    <!--  -->
+</body>
+<script src={% static 'portfolio.js' %}></script>
+
+</html>
